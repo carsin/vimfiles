@@ -15,8 +15,6 @@ set nobackup
 set nowb
 set noswapfile
 
-colorscheme wal " use wal colors
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -68,6 +66,10 @@ set noeb vb t_vb= " no visual bell or beeping (thank god)
 set ruler " Always show current position
 set magic " For regular expressions turn magic on
 set laststatus=0 " no status bar
+let NVIM_TUI_ENABLE_CURSOR_SHAPE=1 " Fix tmux cursor shape
+
+colorscheme wal
+let g:impact_transbg=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Binds & Mappings
@@ -89,7 +91,6 @@ inoremap jk <ESC>
 
 " Remap VIM 0 to first non-blank character
 map 0 ^
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Sourcing
