@@ -1,4 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Load plugins
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " General editing
 Plug 'Raimondi/delimitMate'
@@ -14,7 +17,13 @@ Plug 'pangloss/vim-javascript'
 " Utility
 Plug 'wakatime/vim-wakatime'
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#end()
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Airline
 let g:airline_powerline_fonts = 1
