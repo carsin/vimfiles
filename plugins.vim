@@ -4,18 +4,23 @@ call plug#begin('~/.config/nvim/plugged')
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " General editing
-Plug 'Raimondi/delimitMate'
-Plug 'mattn/emmet-vim'
+Plug 'jiangmiao/auto-pairs' " Pairing
+Plug 'mattn/emmet-vim' " Emmet
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete
 
 " UI
-Plug 'dylanaraps/wal.vim'
-Plug 'bling/vim-airline'
+Plug 'dylanaraps/wal.vim' " Wal color scheme
+Plug 'bling/vim-airline' " Airline status bar
+Plug 'airblade/vim-gitgutter' " Git diff in gutter
+Plug 'majutsushi/tagbar' " Tag bar scope viewer
 
 " Languages
-Plug 'pangloss/vim-javascript'
+Plug 'sheerun/vim-polyglot' " Syntax pack
+Plug 'pangloss/vim-javascript' " JS syntax highlighting
+Plug 'hail2u/vim-css3-syntax' " CSS
 
 " Utility
-Plug 'wakatime/vim-wakatime'
+Plug 'wakatime/vim-wakatime' " Wakatime time tracking
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -25,5 +30,18 @@ call plug#end()
 " => Plugin configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Emmet
+let g:user_emmet_leader_key='<Tab>'
+
+" Deoplete
+call deoplete#enable() " Use deoplete
+
 " Airline
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 1 " Allow airline to use powerline symbols
+
+" Tagbar
+" F8 to toggle tagbar
+nmap <F8> :TagbarToggle<CR>
+
+" F9 to jump to tagbar
+nmap <F8> :TagbarOpen<CR>
