@@ -12,7 +12,6 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete
 Plug 'dylanaraps/wal.vim' " Wal color scheme
 Plug 'bling/vim-airline' " Airline status bar
 Plug 'airblade/vim-gitgutter' " Git diff in gutter
-Plug 'majutsushi/tagbar' " Tag bar scope viewer
 
 " Languages
 Plug 'sheerun/vim-polyglot' " Syntax pack
@@ -38,10 +37,3 @@ call deoplete#enable() " Use deoplete
 
 " Airline
 let g:airline_powerline_fonts = 1 " Allow airline to use powerline symbols
-
-" Tagbar
-" F8 to toggle tagbar
-nmap <F8> :TagbarToggle<CR>
-
-" F9 to jump to tagbar
-nmap <F8> :TagbarOpen<CR>
