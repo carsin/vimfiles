@@ -104,7 +104,6 @@ Plug 'jiangmiao/auto-pairs' " Pairing
 Plug 'mattn/emmet-vim' " Emmet
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete
 Plug 'wellle/tmux-complete.vim' " Autocomplete across tmux sessions & panes
-Plug 'roxma/vim-paste-easy' " Automatically set & unset paste for easy copy and pasting
 Plug 'tpope/vim-commentary' " Adds comment verb
 
 " UI
