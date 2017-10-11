@@ -104,6 +104,8 @@ Plug 'jiangmiao/auto-pairs' " Pairing
 Plug 'mattn/emmet-vim' " Emmet
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete
 Plug 'wellle/tmux-complete.vim' " Autocomplete across tmux sessions & panes
+Plug 'roxma/vim-paste-easy' " Automatically set & unset paste for easy copy and pasting
+Plug 'tpope/vim-commentary' " Adds comment verb
 
 " UI
 Plug 'dylanaraps/wal.vim' " Wal color scheme
@@ -111,14 +113,18 @@ Plug 'bling/vim-airline' " Airline status bar
 Plug 'airblade/vim-gitgutter' " Git diff in gutter
 Plug 'scrooloose/nerdtree' " File system browser
 Plug 'mhinz/vim-startify' " Fancy start screen
+Plug 'ap/vim-css-color' " Preview CSS colors
 
 " Languages
 Plug 'sheerun/vim-polyglot' " Syntax pack
 Plug 'pangloss/vim-javascript' " JS syntax highlighting
+Plug 'othree/javascript-libraries-syntax.vim' " JS libs
 Plug 'hail2u/vim-css3-syntax' " CSS
+Plug 'othree/html5.vim' " HTML
 
 " Utility
 Plug 'wakatime/vim-wakatime' " Wakatime time tracking
+Plug 'christoomey/vim-tmux-navigator' " Navigation between vim splits & tmux panes
 
 call plug#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
