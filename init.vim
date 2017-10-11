@@ -66,7 +66,6 @@ set noeb vb t_vb= " no visual bell or beeping (thank god)
 set ruler " Always show current position
 set magic " For regular expressions turn magic on
 set laststatus=0 " no status bar
-let NVIM_TUI_ENABLE_CURSOR_SHAPE=1 " Fix tmux cursor shape
 
 colorscheme wal
 let g:impact_transbg=1
@@ -96,6 +95,48 @@ map 0 ^
 nnoremap <leader>of :exe ':silent !firefox %'<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Sourcing
+" => Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-source ~/.config/nvim/plugins.vim
+call plug#begin('~/.config/nvim/plugged')
+
+" General editing
+Plug 'jiangmiao/auto-pairs' " Pairing
+Plug 'mattn/emmet-vim' " Emmet
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete
+Plug 'wellle/tmux-complete.vim' " Autocomplete across tmux sessions & panes
+
+" UI
+Plug 'dylanaraps/wal.vim' " Wal color scheme
+Plug 'bling/vim-airline' " Airline status bar
+Plug 'airblade/vim-gitgutter' " Git diff in gutter
+Plug 'scrooloose/nerdtree' " File system browser
+Plug 'mhinz/vim-startify' " Fancy start screen
+
+" Languages
+Plug 'sheerun/vim-polyglot' " Syntax pack
+Plug 'pangloss/vim-javascript' " JS syntax highlighting
+Plug 'hail2u/vim-css3-syntax' " CSS
+
+" Utility
+Plug 'wakatime/vim-wakatime' " Wakatime time tracking
+
+call plug#end()
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Emmet
+let g:user_emmet_leader_key='<Tab>'
+
+" Deoplete
+call deoplete#enable() " Use deoplete
+
+" Airline
+let g:airline_powerline_fonts = 1 " Allow airline to use powerline symbols
+
+" NERDTree
+" Control + N
+map <C-n> :NERDTreeToggle<CR>
+
+" Close vim if only window is NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
