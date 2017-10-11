@@ -92,6 +92,9 @@ inoremap jk <ESC>
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
+" Open current file in web broswers
+nnoremap <leader>of :exe ':silent !firefox %'<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Sourcing
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

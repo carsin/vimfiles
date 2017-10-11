@@ -7,7 +7,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'jiangmiao/auto-pairs' " Pairing
 Plug 'mattn/emmet-vim' " Emmet
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete
-" TODO: Add https://github.com/wellle/tmux-complete.vim
+Plug 'wellle/tmux-complete.vim' " Autocomplete across tmux sessions & panes
 
 " UI
 Plug 'dylanaraps/wal.vim' " Wal color scheme
