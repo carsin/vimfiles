@@ -52,6 +52,8 @@ nnoremap gV `[v`]
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+set clipboard=unnamed " yank across instances
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
