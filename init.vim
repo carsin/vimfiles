@@ -106,7 +106,9 @@ Plug 'jiangmiao/auto-pairs' " Pairing
 Plug 'mattn/emmet-vim' " Emmet
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete
 Plug 'wellle/tmux-complete.vim' " Autocomplete across tmux sessions & panes
-Plug 'tpope/vim-commentary' " Adds comment verb
+Plug 'scrooloose/nerdcommenter' " Easy commenting
+Plug 'easymotion/vim-easymotion' " Jump around files with ease.
+Plug 'tpope/vim-surround' " Easy changing of surroundings in pairs
 
 " UI
 Plug 'dylanaraps/wal.vim' " Wal color scheme
@@ -115,7 +117,7 @@ Plug 'airblade/vim-gitgutter' " Git diff in gutter
 Plug 'scrooloose/nerdtree' " File system browser
 Plug 'mhinz/vim-startify' " Fancy start screen
 Plug 'ap/vim-css-color' " Preview CSS colors
-Plug 'gregsexton/matchtag' " Highlight matching html tag
+Plug 'nathanaelkane/vim-indent-guides' " Indentation guide
 
 " Languages
 Plug 'sheerun/vim-polyglot' " Syntax pack
@@ -127,8 +129,10 @@ Plug 'othree/html5.vim' " HTML
 " Utility
 Plug 'wakatime/vim-wakatime' " Wakatime time tracking
 Plug 'christoomey/vim-tmux-navigator' " Navigation between vim splits & tmux panes
+Plug 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
 
 call plug#end()
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugin configuration
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
