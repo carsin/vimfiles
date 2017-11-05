@@ -115,6 +115,7 @@ Plug 'airblade/vim-gitgutter' " Git diff in gutter
 Plug 'scrooloose/nerdtree' " File system browser
 Plug 'mhinz/vim-startify' " Fancy start screen
 Plug 'ap/vim-css-color' " Preview CSS colors
+Plug 'gregsexton/matchtag' " Highlight matching html tag
 
 " Languages
 Plug 'sheerun/vim-polyglot' " Syntax pack
