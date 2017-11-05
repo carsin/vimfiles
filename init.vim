@@ -117,7 +117,6 @@ Plug 'airblade/vim-gitgutter' " Git diff in gutter
 Plug 'scrooloose/nerdtree' " File system browser
 Plug 'mhinz/vim-startify' " Fancy start screen
 Plug 'ap/vim-css-color' " Preview CSS colors
-Plug 'nathanaelkane/vim-indent-guides' " Indentation guide
 
 " Languages
 Plug 'sheerun/vim-polyglot' " Syntax pack
@@ -129,7 +128,6 @@ Plug 'othree/html5.vim' " HTML
 " Utility
 Plug 'wakatime/vim-wakatime' " Wakatime time tracking
 Plug 'christoomey/vim-tmux-navigator' " Navigation between vim splits & tmux panes
-Plug 'ctrlpvim/ctrlp.vim' " Fuzzy file finder
 
 call plug#end()
 
