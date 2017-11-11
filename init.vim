@@ -95,6 +95,7 @@ map 0 ^
 
 " Open current file in web broswers
 nnoremap <leader>of :exe ':silent !firefox %'<CR>
+nnoremap <leader>og :exe ':silent !google-chrome-stable %'<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Plugins
