@@ -52,8 +52,6 @@ nnoremap gV `[v`]
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-set spell spelllang=en " Spell check
-
 set clipboard=unnamed " yank across instances
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
