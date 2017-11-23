@@ -54,6 +54,16 @@ set whichwrap+=<,>,h,l
 
 set clipboard=unnamed " yank across instances
 
+" Python PEP8 indentation
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -68,7 +78,6 @@ set noeb vb t_vb= " no visual bell or beeping (thank god)
 set ruler " Always show current position
 set magic " For regular expressions turn magic on
 set laststatus=0 " no status bar
-set t_Co=256 " 256 colors
 
 colorscheme wal
 let g:impact_transbg=1
@@ -111,6 +120,7 @@ Plug 'wellle/tmux-complete.vim' " Autocomplete across tmux sessions & panes
 Plug 'scrooloose/nerdcommenter' " Easy commenting
 Plug 'easymotion/vim-easymotion' " Jump around files with ease.
 Plug 'tpope/vim-surround' " Easy changing of surroundings in pairs
+Plug 'ctrlpvim/ctrlp.vim' " Fuzzy path file buffer mru tag finder
 
 " UI
 Plug 'dylanaraps/wal.vim' " Wal color scheme
