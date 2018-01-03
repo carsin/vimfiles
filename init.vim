@@ -4,6 +4,7 @@
 " syntax highlighting based on file names
 filetype on
 syntax on
+syntax enable
 
 set hidden " keep more info in memory to speed things up
 set history=500 " How many lines of history vim has to remember
@@ -54,6 +55,15 @@ set whichwrap+=<,>,h,l
 
 set clipboard=unnamed " yank across instances
 
+" Fix Cursor in TMUX
+if exists('$TMUX')
+  let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+  let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+else
+  let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+  let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+endif
+
 " Python PEP8 indentation
 au BufNewFile,BufRead *.py
     \ set tabstop=4
@@ -63,6 +73,10 @@ au BufNewFile,BufRead *.py
     \ set expandtab
     \ set autoindent
     \ set fileformat=unix
+
+" Enable persistent undo so that undo history persists across vim sessions
+set undofile
+set undodir=~/.vim/undo
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UI
@@ -115,7 +129,9 @@ call plug#begin('~/.config/nvim/plugged')
 " General editing
 Plug 'jiangmiao/auto-pairs' " Pairing
 Plug 'mattn/emmet-vim' " Emmet
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Autocomplete
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } " Dark powered Async autocomplete
+Plug 'Shougo/neosnippet' " Function argument completion for Deoplete
+Plug 'Shougo/neosnippet-snippets'
 Plug 'wellle/tmux-complete.vim' " Autocomplete across tmux sessions & panes
 Plug 'scrooloose/nerdcommenter' " Easy commenting
 Plug 'easymotion/vim-easymotion' " Jump around files with ease.
@@ -150,8 +166,9 @@ call plug#end()
 " Emmet
 let g:user_emmet_leader_key='<Tab>'
 
-" Deoplete
-call deoplete#enable() " Use deoplete
+" Use deoplete & neosnippet
+let g:deoplete#enable_at_startup = 1
+let g:neosnippet#enable_completed_snippet = 1
 
 " Airline
 let g:airline_powerline_fonts = 1 " Allow airline to use powerline symbols
